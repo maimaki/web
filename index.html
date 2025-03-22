@@ -62,7 +62,7 @@
             let remind = document.getElementById("remind");
             const urlParams = new URLSearchParams(window.location.search);
             const data = urlParams.get('data');
-            document.getElementById("task").textContent = data || "Нет данных";
+            document.getElementById("task").value = data || "Нет данных";
             remind.addEventListener("click", () => {
                 document.getElementById("error").innerText = "";
                 let task = document.getElementById("task").value;
