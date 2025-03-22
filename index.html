@@ -60,8 +60,9 @@
         <script>
             let telegram = window.Telegram.WebApp;
             let remind = document.getElementById("remind");
-            let startParam = window.Telegram.WebApp.initDataUnsafe.start_param;
-            document.getElementById("task").value = startParam;
+            const urlParams = new URLSearchParams(window.location.search);
+            const data = urlParams.get('data');
+            document.getElementById("task").textContent = data || "Нет данных";
             remind.addEventListener("click", () => {
                 document.getElementById("error").innerText = "";
                 let task = document.getElementById("task").value;
