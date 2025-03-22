@@ -60,9 +60,6 @@
         <script>
             let telegram = window.Telegram.WebApp;
             let remind = document.getElementById("remind");
-            let urlP = new URLSearchParams(window.location.search);
-            let d = urlP.get('d');
-            document.getElementById("task").value = d;
             remind.addEventListener("click", () => {
                 document.getElementById("error").innerText = "";
                 let task = document.getElementById("task").value;
