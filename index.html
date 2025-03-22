@@ -60,7 +60,7 @@
         <script>
             let telegram = window.Telegram.WebApp;
             let remind = document.getElementById("remind");
-            let startParam = window.Telegram.WebApp.initDataUnsafe.start_param;
+            const startParam = window.Telegram.WebApp.initDataUnsafe.start_param;
             document.getElementById("task").value = startParam;
             remind.addEventListener("click", () => {
                 document.getElementById("error").innerText = "";
