@@ -56,6 +56,10 @@
         <script src="https://telegram.org/js/telegram-web-app.js"></script>
         <script>
             let telegram = window.Telegram.WebApp;
+            let remind = document.getElementById("remind");
+            remind.addEventListener("click", () => {
+                telegram.close();
+            });
         </script>
     </body>
 </html> 
